@@ -7,8 +7,6 @@
 from matplotlib import pyplot as plt
 import pandas as pd
 
-
-
 def f1():
   df = pd.read_csv('../../Downloads/train.csv/train.csv')
   df2 = df[df.stock_id == 0].head(100)
@@ -20,7 +18,5 @@ def f2():
   plt.scatter(x=range(100), y=df['wap'])
   plt.show()
 
-
-
-
+f2()
 
