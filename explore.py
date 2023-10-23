@@ -8,18 +8,17 @@ from matplotlib import pyplot as plt
 import pandas as pd
 
 
-#pd.set_option('display.max_colwidth', None)
-df = pd.read_csv('../../Downloads/train.csv/train.csv')
-df = df.loc[df["stock_id"]==0].head(100)
-print(df)
-#df.to_csv("stock_id_0_first_100.csv")
 
+def f1():
+  df = pd.read_csv('../../Downloads/train.csv/train.csv')
+  df2 = df[df.stock_id == 0].head(100)
+  df2.to_csv("stock_id_0_first_100.csv")
 
-#print(df.head(50000).where(df["stock_id"]==0).head(100))
-
-
-
-
+def f2():
+  df = pd.read_csv('stock_id_0_first_100.csv')
+  plt.scatter(x=range(100), y=df['reference_price'])
+  plt.scatter(x=range(100), y=df['wap'])
+  plt.show()
 
 
 
