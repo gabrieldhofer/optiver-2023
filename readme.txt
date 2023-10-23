@@ -18,3 +18,5 @@ target: 60 second future move in the wap of the stock minus 60 second future mov
 
 synthetic index: custom weighted index of Nasdaq-listed stocks constructed by Optiver..
 
+revealed_targets When the first time_id for each date (i.e. when seconds_in_bucket equals zero) the API will serve a dataframe providing the true target values for the entire previous date. All other rows contain null values for the columns of interest.
+
